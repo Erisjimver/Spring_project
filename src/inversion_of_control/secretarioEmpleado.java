@@ -4,6 +4,28 @@ package inversion_of_control;
 public class secretarioEmpleado implements Empleados {
     //creacion de campo tipo CreacionInformes(interfaz)
     private CreacionInformes informeNuevo;
+    private String email, nombreEmpresa;
+
+    //setters and getters email y nombre empresa
+    @Override
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @Override
+    public String getNombreEmpresa() {
+        return nombreEmpresa;
+    }
+
+    public void setNombreEmpresa(String nombreEmpresa) {
+        this.nombreEmpresa = nombreEmpresa;
+    }
+    //terminan lso setters and getters
+    
     
     //creacion de constructor que inyecta la dependencia
     public secretarioEmpleado(CreacionInformes informeNuevo){

@@ -31,6 +31,8 @@ public class usoEmpleados {
         Empleados Israel=contexto.getBean("jefeEmpleado",Empleados.class);
         System.out.println(""+Israel.getTareas());
         System.out.println(""+Israel.getInformes());
+        System.out.println("El correo del jefe es: "+Israel.getEmail());
+        System.out.println("El nombre de la empresa es: "+Israel.getNombreEmpresa());
         contexto.close();
         
         

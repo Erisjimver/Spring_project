@@ -12,4 +12,12 @@ public class directorEmpleado implements Empleados {
         return null;
     }
     
+    @Override
+    public String getEmail() {
+        return "este es el email: ";
+    }
+    @Override
+    public String getNombreEmpresa() {
+        return "Nombre de la empresa";
+    }     
 }

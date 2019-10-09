@@ -19,5 +19,7 @@
     <!--Creacion de la inyeccion de dependencia-->
     <bean id="jefeEmpleado" class="inversion_of_control.jefeEmpleado">
         <property name="InformeNuevo" ref="miInforme"></property>
+        <property name="email" value="jefe@proyecto.com"></property>
+        <property name="nombreEmpresa" value="Curso Spring"></property>
     </bean>
 </beans>
