@@ -4,7 +4,8 @@ package inversion_of_control;
 public class jefeEmpleado implements Empleados{
     
     private CreacionInformes informeNuevo;
-    private String email, nombreEmpresa;    
+    private String email, nombreEmpresa; 
+    
     public void setInformeNuevo(CreacionInformes informeNuevo) {
         this.informeNuevo = informeNuevo;
     }

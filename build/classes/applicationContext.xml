@@ -8,6 +8,8 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context-3.1.xsd
 ">
+<context:property-placeholder location="classpath:datosEmpresa.propiedades"/> 
+
     <!--Creacion de la dependencia-->
     <bean id="miInforme" class="inversion_of_control.Informe"></bean>
     
@@ -22,4 +24,11 @@
         <property name="email" value="jefe@proyecto.com"></property>
         <property name="nombreEmpresa" value="Curso Spring"></property>
     </bean>
+    
+    <!--Creacion de la inyeccion de dependencia archivo de propiedades-->
+    <bean id="directorEmpleado" class="inversion_of_control.directorEmpleado">
+        <property name="InformeNuevo" ref="miInforme"></property>
+        <property name="email" value="${email}"></property>
+        <property name="nombreEmpresa" value="${nombreEmpresa}"></property>
+    </bean>    
 </beans>

@@ -1,23 +1,41 @@
 package inversion_of_control;
 
 public class directorEmpleado implements Empleados {
+    
+    private CreacionInformes informeNuevo;
+    private String email, nombreEmpresa; 
+    
+    public void setInformeNuevo(CreacionInformes informeNuevo) {
+        this.informeNuevo = informeNuevo;
+    } 
 
     @Override
     public String getTareas() {
-        return "Gestiona la plantilla de la empresa";
+       return "Gestiono las cuestiones relativas al jefe";
     }
 
     @Override
     public String getInformes() {
-        return null;
-    }
+        return "Informe generado por el director: " +informeNuevo.getInformes();
+    }  
     
+    //setters and getters email y nombre empresa
     @Override
     public String getEmail() {
-        return "este es el email: ";
+        return email;
     }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     @Override
     public String getNombreEmpresa() {
-        return "Nombre de la empresa";
-    }     
+        return nombreEmpresa;
+    }
+
+    public void setNombreEmpresa(String nombreEmpresa) {
+        this.nombreEmpresa = nombreEmpresa;
+    }
+    //terminan lso setters and getters    
 }
