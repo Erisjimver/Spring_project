@@ -5,7 +5,11 @@ public class secretarioEmpleado implements Empleados {
     //creacion de campo tipo CreacionInformes(interfaz)
     private CreacionInformes informeNuevo;
     private String email, nombreEmpresa;
-
+    
+    //creacion de constructor que inyecta la dependencia
+    public void setInformeNuevo(CreacionInformes informeNuevo){
+        this.informeNuevo = informeNuevo;
+    }
     //setters and getters email y nombre empresa
     @Override
     public String getEmail() {
@@ -24,13 +28,8 @@ public class secretarioEmpleado implements Empleados {
     public void setNombreEmpresa(String nombreEmpresa) {
         this.nombreEmpresa = nombreEmpresa;
     }
-    //terminan lso setters and getters
-    
-    
-    //creacion de constructor que inyecta la dependencia
-    public secretarioEmpleado(CreacionInformes informeNuevo){
-        this.informeNuevo=informeNuevo;
-    }
+    //terminan lso setters and getters    
+
     @Override
     public String getTareas() {
         return "Gestionar la agenda de los jefes"; //To change body of generated methods, choose Tools | Templates.
