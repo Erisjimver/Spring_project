@@ -14,8 +14,13 @@
     <bean id="miInforme" class="inversion_of_control.Informe"></bean>
     
     <!--Creacion de la inyeccion de dependencia-->
-    <bean id="secretarioEmpleado" class="inversion_of_control.secretarioEmpleado" scope="prototype">
-        <property name="InformeNuevo" ref="miInforme"></property>
+    <bean id="miEmpleado" class="inyecion_dependencias.secretarioEmpleado"
+    init-method="metodoInicial" 
+    destroy-method="metodoFinal"
+    >
+        <constructor-arg ref="miInforme"></constructor-arg>
     </bean>
+   
+    
       
 </beans>

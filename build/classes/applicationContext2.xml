@@ -14,7 +14,7 @@
     <bean id="miInforme" class="inversion_of_control.Informe"></bean>
     
     <!--Creacion de la inyeccion de dependencia-->
-    <bean id="secretarioEmpleado" class="inversion_of_control.secretarioEmpleado" scope="singleton">
+    <bean id="secretarioEmpleado" class="inversion_of_control.secretarioEmpleado" scope="prototype">
         <property name="InformeNuevo" ref="miInforme"></property>
     </bean>
       

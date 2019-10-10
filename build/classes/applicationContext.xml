@@ -14,7 +14,7 @@
     <bean id="miInforme" class="inversion_of_control.Informe"></bean>
     
     <!--Creacion de la dependencia mediante costructor-->
-    <bean id="miEmpleado" class="inversion_of_control.secretarioEmpleado">
+    <bean id="secretarioEmpleado" class="inversion_of_control.secretarioEmpleado">
         <constructor-arg ref="miInforme"></constructor-arg>
     </bean>
     
