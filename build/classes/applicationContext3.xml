@@ -14,7 +14,7 @@
     <bean id="miInforme" class="inversion_of_control.Informe"></bean>
     
     <!--Creacion de la inyeccion de dependencia-->
-    <bean id="miEmpleado" class="inyecion_dependencias.secretarioEmpleado"
+    <bean id="miEmpleado" class="inversion_of_control.secretarioEmpleado"
     init-method="metodoInicial" 
     destroy-method="metodoFinal"
     >

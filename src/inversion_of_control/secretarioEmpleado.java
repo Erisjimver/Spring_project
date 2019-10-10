@@ -37,5 +37,12 @@ public class secretarioEmpleado implements Empleados {
     public void setNombreEmpresa(String nombreEmpresa) {
         this.nombreEmpresa = nombreEmpresa;
     }
-    //terminan lso setters and getters    
+    //terminan lso setters and getters  
+    
+    public void metodoInicial(){
+        System.out.println("metodo init");
+    }
+    public void metodoFinal(){
+        System.out.println("Metodo Destroy");
+    }
 }

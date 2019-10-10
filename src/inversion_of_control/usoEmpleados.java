@@ -9,9 +9,9 @@ public class usoEmpleados {
     public static void main(String[] args) {
         
         
-        ClassPathXmlApplicationContext contexto=new ClassPathXmlApplicationContext("applicationContext.xml");
+        ClassPathXmlApplicationContext contexto=new ClassPathXmlApplicationContext("applicationContext3.xml");
         //Creacion de objetos de tipo empleado
-        
+       /* 
         Empleados Empleado1=new jefeEmpleado();
         Empleados Empleado2=new secretarioEmpleado();
         Empleados Empleado3=new directorEmpleado();
@@ -35,7 +35,9 @@ public class usoEmpleados {
         System.out.println("El nombre de la empresa es: "+Israel.getNombreEmpresa());
         
         contexto.close();
-        
+       */
+       Empleados Maria=contexto.getBean("miEmpleado",Empleados.class);
+       System.out.println(Maria.getInformes());
         
     }
     
